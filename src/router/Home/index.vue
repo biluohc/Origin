@@ -1,6 +1,5 @@
 <template>
-<div>
-    <div align="center">
+  <div align="center">
         <TopBar> </TopBar>
 
         <!--搜索引擎表单-->
@@ -15,9 +14,9 @@
 </template>
 
 <script>
-import TopBar from "../components/TopBar.vue";
-import SearchBar from "../components/SearchBar.vue";
-import SiteTable from "../components/SiteTable.vue";
+import TopBar from "./components/TopBar.vue";
+import SearchBar from "./components/SearchBar.vue";
+import SiteTable from "./components/SiteTable.vue";
 
 export default {
   name: "Home",

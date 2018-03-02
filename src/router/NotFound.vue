@@ -1,5 +1,5 @@
 <template>
-<div>
+<div align='center'>
     <h1>404 Not Found</h1>
     <ul>
         <li><router-link to="/">Home</router-link></li>

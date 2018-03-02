@@ -1,8 +1,9 @@
 <template>
-<div  id='top-bar' align="center">
-        <h1>
-            <font color="#666600" size="12">{{ datetime }}</font>
-        </h1>
+<div id='top-bar'>
+          <h1>
+            <span align="center"><font color="#666600" size="12">{{ datetime }}</font></span>
+            <span align="right" ><router-link to="/editor"><button>Editor</button></router-link></span>            
+          </h1>
 </div>
 </template>
 

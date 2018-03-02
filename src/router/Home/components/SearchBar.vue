@@ -4,7 +4,7 @@
     <input id="input" :name="selected_search_engine.query" autofocus="autofocus" maxlength="64" size="86" type="text">
     <select id="select" v-model="selected_search_engine_name">
         <option disabled value="">请选择</option>
-        <option v-for="search_engine in search_engines" :key="search_engine.name" >{{search_engine.name}}</option>
+        <option v-for="search_engine in search_engines" :key="search_engine.name">{{search_engine.name}}</option>
     </select>
         <input id="submit" value="搜索" type="submit">
     </form>
