@@ -102,7 +102,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 .inline {
   width: 49%;
   display: inline-block;
