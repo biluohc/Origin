@@ -12,13 +12,19 @@
 <script>
 export default {
   props: {
-    sites_tr_length: Number,
-    sites_tr_length_up: Function,
-    sites_tr_length_down: Function
+    sites_tr_length: Number
   },
-  methods: {}
+  methods: {
+    sites_tr_length_up: function() {
+      this.$emit("sites-tr-length-up");
+    },
+    sites_tr_length_down: function() {
+      this.$emit("sites-tr-length-down");
+    }
+  }
 };
 </script>
 
 <style>
+
 </style>

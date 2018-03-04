@@ -9,15 +9,19 @@
       <td>名字</td>
       <td>链接</td>
       <td>查询参数名</td>
+      <td>上移</td>
+      <td>下移</td>
       <td>点击删除</td>
     </thead>
     <tbody>
       <SearchEngine v-for="(se,idx) in search_engines" :key="key(idx)"
-      :id="idx" :se-init="se"
-      :se_remove="se_remove"      
+      :id="idx" :length="ses_length" :se-init="se"
       @se-name-change="se_name_change"
       @se-url-change="se_url_change"
       @se-query-change="se_query_change"
+      @se-up="se_up"
+      @se-down="se_down"
+      @se-remove="site_remove"
       >
       </SearchEngine>
       </tbody>
@@ -31,6 +35,13 @@
 import SearchEngine from "./SearchEngine.vue";
 
 export default {
+  data: function() {
+    return {
+      keys: this.search_engines.map(function(val, index, array) {
+        return "" + array.length + index;
+      })
+    };
+  },
   props: {
     search_engines: Array
   },
@@ -44,7 +55,7 @@ export default {
   },
   methods: {
     key: function(idx) {
-      return this.ses_length * (idx + 1);
+      return this.keys[idx];
     },
     se_add: function() {
       this.search_engines.push({
@@ -81,6 +92,44 @@ export default {
         val
       );
       this.search_engines[idx].query = val;
+    },
+    se_up: function(idx) {
+      if (idx > 0) {
+        var tmp = this.search_engines[idx];
+        this.search_engines.splice(idx, 1, this.search_engines[idx - 1]);
+        this.search_engines.splice(idx - 1, 1, tmp);
+        for (var i = 0; i < this.keys.length; i++) {
+          this.keys.splice(
+            i,
+            1,
+            "" +
+              this.search_engines.length +
+              i +
+              "up" +
+              idx +
+              new Date().valueOf()
+          );
+        }
+      }
+    },
+    se_down: function(idx) {
+      if (idx + 1 < this.search_engines.length) {
+        var tmp = this.search_engines[idx + 1];
+        this.search_engines.splice(idx + 1, 1, this.search_engines[idx]);
+        this.search_engines.splice(idx, 1, tmp);
+        for (var i = 0; i < this.keys.length; i++) {
+          this.keys.splice(
+            i,
+            1,
+            "" +
+              this.search_engines.length +
+              i +
+              "down" +
+              idx +
+              new Date().valueOf()
+          );
+        }
+      }
     }
   }
 };

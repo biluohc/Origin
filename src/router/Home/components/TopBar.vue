@@ -1,9 +1,9 @@
 <template>
-<div id='top-bar'>
-          <h1>
-            <span align="center"><font color="#666600" size="12">{{ datetime }}</font></span>
-            <span align="right" ><router-link to="/editor"><button>Editor</button></router-link></span>            
-          </h1>
+<div>
+    <h1>
+      <span align="center" class="h1">{{ datetime }}</span>
+      <span align="right" ><router-link to="/editor"><button>Editor</button></router-link></span>            
+    </h1>
 </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     };
   },
   methods: {
-    datetime_string: function () {
+    datetime_string: function() {
       function get_hour(n) {
         var hour = n < 13 ? "上午" : "下午";
         n = hour === "上午" ? n : n - 12;
@@ -44,16 +44,19 @@ export default {
       );
     },
     datetime_update: function() {
-        this.datetime = this.datetime_string()
+      this.datetime = this.datetime_string();
     }
   },
   created: function() {
-    setInterval(this.datetime_update, 500)
-    this.datetime_update
+    setInterval(this.datetime_update, 500);
+    this.datetime_update;
   }
 };
 </script>
 
 <style>
-
+.h1 {
+  color: #666600;
+  font-size: 49px;
+}
 </style>

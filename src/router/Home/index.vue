@@ -29,9 +29,11 @@ export default {
 </script>
 
 <style>
-/* // <style scoped>   */
+a {
+  color: #339999;
+}
 a:hover {
   background-color: transparent;
-  color: dodgerblue;
+  color: #fda000;
 }
 </style>

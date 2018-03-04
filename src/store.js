@@ -43,8 +43,8 @@ const OBJ = {
       "url": "https://go-zh.org/doc/"
     },
     {
-      "name": "動漫花園",
-      "url": " https://share.dmhy.org/"
+      "name": "Sass",
+      "url": "https://www.sass.hk/"
     },
     {
       "name": "Rust",
@@ -173,10 +173,7 @@ const OBJ = {
   ],
   copy: function () {
     var tmp = {}
-    tmp.sites = JSON.parse(JSON.stringify(this.sites))
-    for (var index = 0; index < tmp.sites.length; index++) {
-      delete tmp.sites[index].class_
-    }
+    tmp.sites = this.sites
     tmp.sites_tr_length = this.sites_tr_length
     tmp.search_engines = this.search_engines
     return tmp
@@ -186,9 +183,11 @@ const OBJ = {
     for (var index = 0; index < new_sites.length; index++) {
       this.sites.splice(index, 1, new_sites[index])
     }
+    this.sites.length = new_sites.length
     for (var index = 0; index < new_search_engines.length; index++) {
       this.search_engines.splice(index, 1, new_search_engines[index])
     }
+    this.search_engines.length = new_search_engines.length
   },
   save_config_to_localStorage: function () {
     var tmp = this.copy()
@@ -207,8 +206,18 @@ const OBJ = {
       this.update(tmp_json.sites_tr_length, tmp_json.sites, tmp_json.search_engines)
       return true
     }
+  },
+  bakeup: function() {
+    this.rawJson = JSON.stringify(this.copy())
+  },
+  reset: function() {
+    var tmp_json = JSON.parse(this.rawJson)
+    this.update(tmp_json.sites_tr_length, tmp_json.sites, tmp_json.search_engines)
+    this.save_config_to_localStorage()
   }
 }
+
+OBJ.bakeup()
 
 if (!OBJ.read_config_from_localStorage()) {
   OBJ.save_config_to_localStorage()

@@ -4,7 +4,7 @@
     <tbody>
       <tr v-for="sites in sites_list" :key="sites.id">
         <!-- 单元格点击支持+元素点击支持 -->
-         <td  v-for="site in sites" :key="site.name" :class="site.class_" @click='jump(site.url)'>
+         <td  v-for="site in sites" :key="site.name" @click='jump(site.url)'>
           <a :href="site.url">
            <span>{{ site.name }}</span>
           </a>
@@ -29,27 +29,19 @@ export default {
   },
   computed: {
     sites_list: function() {
-      var class0 = "class_red";
-      var class1 = "class_blue";
-      var class_ = class0;
       var sites_raw = this.sites_raw;
       var sites_list = [];
       var sites_tmp = [];
       for (var i = 0; i < sites_raw.length; i++) {
         if ((i + 1) % this.sites_tr_length === 0) {
-          if (class_ == class0) {
-            class_ = class1;
-          } else {
-            class_ = class0;
-          }
-          sites_raw[i].class_ = class_;
           sites_tmp.push(sites_raw[i]);
-          //
           sites_list.push(sites_tmp);
           sites_tmp = [];
         } else {
-          sites_raw[i].class_ = class_;
           sites_tmp.push(sites_raw[i]);
+          if (i + 1 === sites_raw.length) {
+            sites_list.push(sites_tmp);
+          }
         }
       }
       console.log(sites_list);
@@ -59,30 +51,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 table {
-  color: #0099cc;
-  text-align: left;
   font-size: 48px;
   font-weight: bold;
-  margin-left: 3%;
   width: 80%;
   height: 70%;
   text-align: center;
-  border: 1px solid red;
+  border: 1px midium #aaa;
   empty-cells: hide;
 }
 a {
   text-decoration: none;
-}
-.class_red {
-  width: 20%;
-  color: red;
-  border: 1px solid red;
-}
-.class_blue {
-  width: 20%;
-  color: blue;
-  border: 1px solid blue;
 }
 </style>

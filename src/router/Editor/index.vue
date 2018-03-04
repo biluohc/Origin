@@ -9,8 +9,8 @@
     <h1>Editor</h1>
     <SitesTrLength
     :sites_tr_length="sites_tr_length" 
-    :sites_tr_length_up="sites_tr_length_up" 
-    :sites_tr_length_down="sites_tr_length_down">
+    @sites-tr-length-up="sites_tr_length_up" 
+    @sites-tr-length-down="sites_tr_length_down">
     </SitesTrLength>
     <SearchEngines :search_engines="search_engines"></SearchEngines>
     <Sites :sites="sites"></Sites>    

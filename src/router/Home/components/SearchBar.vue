@@ -1,6 +1,6 @@
 <template>
 <div id="search_engines">
-    <form :action="selected_search_engine.url" method="get" target="_self" align="middle">
+    <form :action="selected_search_engine.url" method="get" target="_self">
     <input id="input" :name="selected_search_engine.query" autofocus="autofocus" maxlength="64" size="86" type="text">
     <select id="select" v-model="selected_search_engine_name">
         <option disabled value="">请选择</option>
@@ -33,33 +33,32 @@ export default {
 
 <style scoped>
 form {
-  background-color: transparent;
-  text-align: left;
   font-size: 32px;
   font-weight: bold;
-  margin-left: 8%;
+  margin-left: 5%;
   width: 90%;
   height: 70%;
   text-align: center;
-  border: 1px solid transparent;
-  empty-cells: hide;
+  /* 隐藏 */
+  border: 0px; 
 }
 #input {
-  background-color: transparent;
+  background: transparent;
+  border: 1px solid #aaa;
   width: 60%;
   height: 20%;
   font-size: 32px;
   font-weight: bold;
 }
 #select {
-  background-color: transparent;
+  border: 1px solid #aaa;
   font-size: 32px;
   font-weight: bold;
   width: 6%;
   height: 20%;
 }
 #submit {
-  background-color: transparent;
+  border: 1px solid #aaa;
   width: 10%;
   height: 20%;
   font-size: 32px;

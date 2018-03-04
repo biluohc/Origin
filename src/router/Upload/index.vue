@@ -1,7 +1,10 @@
 <template>
 <div align='center'>
     <div class="inline" ><router-link to="/"><button>Home</button></router-link></div>    
-    <div class="inline" ><router-link to="/editor"><button>Editor</button></router-link></div>    
+    <div class="inline" >
+    <button @click="reset" id='reset'>重置</button>
+    <router-link to="/editor"><button>Editor</button></router-link>
+    </div>    
     <h1>导入配置文件</h1>
     <p/>
     <h2>从本地文件导入</h2>    
@@ -40,6 +43,17 @@ export default {
     }
   },
   methods: {
+    reset: function() {
+      var confir = confirm("确认重置？");
+      // 我的fx58返回undefined..
+      console.log("确认重置？", confir);
+      if (confir === true) {
+        this.store.reset();
+        alert("通知：重置成功");
+      } else if (confir === undefined || confir === null) {
+        alert("错误：Confirm()返回的不是Bool, 请尝试使用其它浏览器导出再导入");
+      }
+    },
     change: function(event) {
       try {
         if (event.target.files.length == 1) {
@@ -102,9 +116,13 @@ export default {
 };
 </script>
 
-<style lang='scss' scoped>
+<style scoped>
 .inline {
   width: 49%;
   display: inline-block;
+}
+#reset {
+  margin: auto 20% auto auto;
+  color: red;
 }
 </style>
