@@ -50,8 +50,9 @@ export default {
       if (confir === true) {
         this.store.reset();
         alert("通知：重置成功");
-      } else if (confir === undefined || confir === null) {
-        alert("错误：Confirm()返回的不是Bool, 请尝试使用其它浏览器导出再导入");
+      } else if (confir === false) {
+      } else {
+        alert("错误：Confirm()返回的不是Bool, 请尝试使用其它浏览器导出再导入。");
       }
     },
     change: function(event) {
