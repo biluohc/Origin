@@ -7,24 +7,20 @@ const OBJ = {
       "url": "https://wiki.archlinux.org/index.php/List_of_applications_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29"
     },
     {
-      "name": "openSUSE",
-      "url": "https://software.opensuse.org/421/zh_CN"
-    },
-    {
-      "name": "suse.org.cn",
-      "url": "https://forum.suse.org.cn/"
-    },
-    {
       "name": "维基百科",
       "url": "https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5"
     },
     {
-      "name": "CnBeta",
-      "url": "http://www.cnbeta.com/"
+      "name": "Reddit",
+      "url": "https://www.reddit.com/"
     },
     {
-      "name": "W3C",
-      "url": "http://www.w3cschool.cn/"
+      "name": "推酷",
+      "url": "https://www.tuicool.com/a/"
+    },
+    {
+      "name": "suse.org.cn",
+      "url": "https://forum.suse.org.cn/"
     },
     {
       "name": "W3S",
@@ -40,7 +36,11 @@ const OBJ = {
     },
     {
       "name": "Go",
-      "url": "https://go-zh.org/doc/"
+      "url": "https://golang.google.cn/pkg/"
+    },
+    {
+      "name": "StudyGo",
+      "url": "https://studygolang.com/"
     },
     {
       "name": "Sass",
@@ -169,6 +169,16 @@ const OBJ = {
       "name": "搜狗",
       "url": "https://www.sogou.com/web",
       "query": "query"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/search?utf8=✓",
+      "query": "q"
+    },
+    {
+      "name": "openSUSE",
+      "url": "https://software.opensuse.org/search?utf8=✓",
+      "query": "q"
     }
   ],
   copy: function () {
@@ -207,10 +217,10 @@ const OBJ = {
       return true
     }
   },
-  bakeup: function() {
+  bakeup: function () {
     this.rawJson = JSON.stringify(this.copy())
   },
-  reset: function() {
+  reset: function () {
     var tmp_json = JSON.parse(this.rawJson)
     this.update(tmp_json.sites_tr_length, tmp_json.sites, tmp_json.search_engines)
     this.save_config_to_localStorage()
