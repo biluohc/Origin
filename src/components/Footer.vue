@@ -3,14 +3,17 @@
     <br/>
     <br/>
     <br/>
-<footer>
-    <a href="https://github.com/biluohc/Cloud-home-Page">Cloud home Page@wspsxing</a>
-<footer>
-<address> 
+    <footer>
+        <a href="https://github.com/biluohc/Cloud-home-Page">Cloud home Page@wspsxing</a>
+    </footer>
+</address> 
 </template>
 
 <script>
-</script>
+export default {
+  name: "Footer"
+};
+</script> 
 
 <style scoped>
 footer {

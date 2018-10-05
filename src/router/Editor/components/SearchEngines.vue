@@ -21,7 +21,7 @@
       @se-query-change="se_query_change"
       @se-up="se_up"
       @se-down="se_down"
-      @se-remove="site_remove"
+      @se-remove="se_remove"
       >
       </SearchEngine>
       </tbody>

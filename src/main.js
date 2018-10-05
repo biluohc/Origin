@@ -15,8 +15,7 @@ Vue.prototype.store = store
 Vue.prototype.FileSaver = FileSaver
 
 new Vue({
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  render: h => h(App)
+}).$mount('#app')
+
