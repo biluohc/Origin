@@ -11,7 +11,7 @@
 export default {
   data: function() {
     return {
-      datetime: "Cloud home Page"
+      datetime: "Start"
     };
   },
   methods: {

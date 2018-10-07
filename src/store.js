@@ -99,8 +99,8 @@ const OBJ = {
       "url": " https://www.bing.com/translator"
     },
     {
-      "name": "谷歌翻译",
-      "url": "http://translate.google.cn/"
+      "name": "搜狗翻译",
+      "url": "https://fanyi.sogou.com/"
     },
     {
       "name": "京东商城",
@@ -131,8 +131,8 @@ const OBJ = {
       "url": "http://pic.sogou.com/ "
     },
     {
-      "name": "网盘搜",
-      "url": "http://www.wangpansou.cn/"
+      "name": "鸠摩搜索",
+      "url": "https://www.jiumodiary.com/"
     },
     {
       "name": "盘搜搜",
