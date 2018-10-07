@@ -4,7 +4,7 @@ b:
 s:
 	yarn serve
 
-d: 
+d: b
 	echo "\033[35m清理于： `TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"` \033[0m" \
 	&& rm -frv docs \
 	&& echo "\033[35m清理完毕于： `TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"` \033[0m" \
