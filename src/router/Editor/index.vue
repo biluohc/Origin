@@ -78,7 +78,7 @@ export default {
       var blob = new Blob([json], { type: "application/json;charset=utf-8" });
       var date = new Date();
       var file_name =
-        "Cloud-home-Page配置文件." + date.toLocaleString() + ".json";
+        "Start-配置文件." + date.toLocaleString() + ".json";
       this.FileSaver.saveAs(blob, file_name);
     }
   },

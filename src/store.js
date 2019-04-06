@@ -1,4 +1,4 @@
-const localStorageKey = "Cloud-home-Page.Config"
+const localStorageKey = "Start.Config"
 
 const OBJ = {
   "sites": [
@@ -19,8 +19,8 @@ const OBJ = {
       "url": "https://www.tuicool.com/a/"
     },
     {
-      "name": "suse.org.cn",
-      "url": "https://forum.suse.org.cn/"
+      "name": "Ruby China",
+      "url": "https://ruby-china.org/"
     },
     {
       "name": "W3S",
