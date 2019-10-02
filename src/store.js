@@ -72,7 +72,7 @@ const OBJ = {
     },
     {
       "name": "知乎",
-      "url": "https://www.zhihu.com/"
+      "url": "https://www.zhihu.com/topic#"
     },
     {
       "name": "百度贴吧",
@@ -135,8 +135,8 @@ const OBJ = {
       "url": "https://www.jiumodiary.com/"
     },
     {
-      "name": "盘搜搜",
-      "url": "http://www.pansoso.com/#fromapp"
+      "name": "如风搜",
+      "url": "http://www.rufengso.net/"
     },
     {
       "name": "淘林网",
@@ -145,6 +145,11 @@ const OBJ = {
   ],
   "sites_tr_length": 5,
   "search_engines": [
+    {
+      "name": "doge",
+      "url": "https://www.dogedoge.com/results",
+      "query": "q"
+    },
     {
       "name": "百度",
       "url": "https://www.baidu.com/s",
