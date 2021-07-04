@@ -2,7 +2,7 @@ b:
 	yarn build
 
 s:
-	yarn serve
+	yarn dev
 
 d: b
 	echo "\033[35m清理于： `TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"` \033[0m" \
