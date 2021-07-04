@@ -1,4 +1,4 @@
-# origin
+# Origin
 
 ## Project setup
 ```
