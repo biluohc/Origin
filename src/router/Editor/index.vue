@@ -78,7 +78,7 @@ export default {
       var blob = new Blob([json], { type: "application/json;charset=utf-8" });
       var date = new Date();
       var file_name =
-        "Start-配置文件." + date.toLocaleString() + ".json";
+        "Origin-Config." + date.toLocaleString() + ".json";
       window.FileSaver.saveAs(blob, file_name);
     }
   },
