@@ -44,8 +44,8 @@ const OBJ = {
       "url": "https://studygolang.com/",
     },
     {
-      "name": "Sass",
-      "url": "https://www.sass.hk/",
+      "name": "TailwindCSS",
+      "url": "http://tailwind.wyz.xyz/",
     },
     {
       "name": "Rust",
