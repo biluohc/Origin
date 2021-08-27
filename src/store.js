@@ -60,8 +60,8 @@ const OBJ = {
       "url": "https://docs.rs/",
     },
     {
-      "name": "Rust.cc",
-      "url": "https://rust.cc/",
+      "name": "Rustcc",
+      "url": "https://rustcc.cn/",
     },
     {
       "name": "GitHub",
@@ -181,6 +181,11 @@ const OBJ = {
       "name": "openSUSE",
       "url": "https://software.opensuse.org/search?utf8=✓",
       "query": "q",
+    },
+    {
+      "name": "denox",
+      "url": 'https://deno.land/x',
+      "query": "query",
     },
   ],
   copy: function () {
