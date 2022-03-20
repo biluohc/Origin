@@ -2,25 +2,19 @@
 
 ## Project setup
 ```
-yarn install
+make i
+# pnpm run install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn dev
+make s
+# pnpm run dev
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+make b
+# pnpm run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```

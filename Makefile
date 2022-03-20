@@ -1,8 +1,11 @@
+i:
+	pnpm install
+
 b:
-	yarn build
+	pnpm run build
 
 s:
-	yarn dev
+	pnpm run dev
 
 d: b
 	echo "\033[35m清理于： `TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"` \033[0m" \
@@ -11,7 +14,4 @@ d: b
 	&& echo "\033[35m分发于： `TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"` \033[0m" \
 	&& cp -rpv dist docs \
 	&& echo "\033[35m分发完毕于： `TZ=UTC-8 date +"%Y-%m-%d %H:%M:%S"` \033[0m" \
-
-
-	
 
