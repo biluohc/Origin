@@ -32,8 +32,8 @@ const OBJ = {
       "url": "https://developer.mozilla.org/zh-CN/",
     },
     {
-      "name": "Vue3.js",
-      "url": "https://v3.cn.vuejs.org/",
+      "name": "React",
+      "url": "https://zh-hans.reactjs.org",
     },
     {
       "name": "Go",
@@ -44,8 +44,8 @@ const OBJ = {
       "url": "https://studygolang.com/",
     },
     {
-      "name": "TailwindCSS",
-      "url": "http://tailwind.wyz.xyz/",
+      "name": "UnoCSS",
+      "url": "https://github.com/unocss/unocss",
     },
     {
       "name": "Rust",
@@ -184,7 +184,7 @@ const OBJ = {
     },
     {
       "name": "denox",
-      "url": 'https://deno.land/x',
+      "url": "https://deno.land/x",
       "query": "query",
     },
   ],
