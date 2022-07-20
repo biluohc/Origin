@@ -137,8 +137,8 @@ const OBJ = {
       "url": "https://www.jiumodiary.com/",
     },
     {
-      "name": "点点文档",
-      "url": "https://www.torrent.org.cn/bd",
+      "name": "小白盘",
+      "url": "https://www.xiaobaipan.com/",
     },
     {
       "name": "微米分享",
